@@ -7,4 +7,16 @@
 body {
     font-family: Calibri;
     background-color: rgb(12, 93, 214);
+    color: rgb(236, 227, 227);
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#game div p {
+    text-align: center;
 }
