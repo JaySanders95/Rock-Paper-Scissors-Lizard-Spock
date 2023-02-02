@@ -64,6 +64,10 @@ div.selection  {
     align-items: center;
 }
 
+div.selection p {
+    font-size: 20px;
+}
+
 img.computers-selection {
     border-radius: 50%
 }
@@ -76,4 +80,16 @@ div.options {
     display: flex;
     justify-content: space-evenly;
     padding-top: 20px;
+}
+
+.buttonstyle {
+    border:none;
+    color: rgb(236, 227, 227);
+    background-color: red;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 5%;
+    font-weight: 700;
+
 }
