@@ -44,7 +44,7 @@ body {
 }
 
 
-#lets-play {
+.lets-play {
     border:none;
     color: rgb(236, 227, 227);
     background-color: red;
@@ -59,7 +59,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    opacity: 0;
+    
    }
 
 h2.win {
@@ -104,7 +104,12 @@ div.options {
 
 }
 
-section#rules fadeOut {
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+div.fadeOut {
     opacity: 0;
     pointer-events: none;
 }
