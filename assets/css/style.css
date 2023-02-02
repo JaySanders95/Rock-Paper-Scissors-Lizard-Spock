@@ -21,21 +21,28 @@ body {
     text-align: center;
 }
 
-#rules {
+.rules {
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     opacity: 1;
 }
-#rules h2 {
+.rules h2 {
     text-decoration: underline;
     padding:25px;
 }
 
-#rules img {
+.rules img {
     width: 350px
 }
+
+.rules div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 #lets-play {
     border:none;
@@ -95,4 +102,9 @@ div.options {
     border-radius: 5%;
     font-weight: 700;
 
+}
+
+section#rules fadeOut {
+    opacity: 0;
+    pointer-events: none;
 }
