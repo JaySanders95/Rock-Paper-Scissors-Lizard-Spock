@@ -26,7 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    opacity: 0;
+    opacity: 1;
 }
 #rules h2 {
     text-decoration: underline;
@@ -52,16 +52,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    opacity: 0;
    }
 
 h2.win {
     text-align: center;
 }
 
+
 div.selection  {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 div.selection p {
