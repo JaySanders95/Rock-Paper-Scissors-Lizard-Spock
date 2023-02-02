@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    border: none;
+    padding: none;
+}
+
+body {
+    font-family: Calibri;
+    background-color: rgb(12, 93, 214);
+}
