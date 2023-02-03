@@ -44,7 +44,7 @@ body {
 }
 
 
-.lets-play {
+#lets-play {
     border:none;
     color: rgb(236, 227, 227);
     background-color: red;

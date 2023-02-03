@@ -5,36 +5,65 @@ const game = ()=> {
 
     //this function will remove the rules and start the game once called
 const startGame = ()=> {
-    const letsPlay = document.getElementsByClassName('lets-play')[0]
-    const rules = document.getElementsByName('rules')[0]
-    const match = document.getElementsByClassName('match')[0]
+    const letsPlay = document.getElementById('lets-play')
+    const rules = document.querySelector('.rules');
+    const match = document.getElementsByClassName('match')[0];
+
+console.log(letsPlay, "<=== lets play")
 
     letsPlay.addEventListener('click', () => { 
+        console.log("cliocked!!!", rules)
         rules.classList.add("fadeOut")
       });
 }
 
 startGame();
 
-/* ill be back */
+
+
+/* WHY WONT YOU WORK?!?!? */
 
 
 
 const playMatch = () => {
-    const options = document.querySelectorAll('.selections button')
+    const options = document.getElementsByClassName('buttonStyle');
+    const playerChoice = document.getElementsByClassName('players-selection');
+    const computerChoice = document.getElementsByClassName('computers-selection');
+    const computerSelections = ['rock', 'paper' , 'scissors', 'lizard', 'spock'];
+    
+   
+
+    options.forEach(option=>{
+        option.addEventListener('click', function() {
+           let randomNumber = Math.floor(Math.random() * 5);
+           let computerPicks = computerSelections[randomNumber];
+           console.log(computerPicks);
+        }
+        )
+
+
+    })
+    
+};
+
+/* OR YOU?!?!?!? */
+
+let = hello = "hello world";
+
+console.log(hello);
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
+game();
