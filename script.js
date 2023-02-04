@@ -23,26 +23,37 @@ const game = () => {
         const playerChoice = document.getElementsByClassName('players-selection');
         const computerChoice = document.getElementsByClassName('computers-selection');
         const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-
-        console.log(playerChoice);
-        console.log(computerChoice);
-
         //Randomly computer generated pick for the computer
-        let randomNumber = Math.floor(Math.random() * 5);
-                let computerPicks = computerSelections[randomNumber];
-                console.log(computerPicks);
+        options.forEach(option => { 
+            option.addEventListener('click', function() {
+              let randomNumber = Math.floor(Math.random() * 5);  
+              let computerPicks = computerSelections[randomNumber];
+              console.log(computerPicks);
+            })})
+        }
+    
+
+
+        
+        
+                
+               
+
+      
 
            // if its a draw     
          const decideWinner = (playerChoice, computerChoice) => {
             if (playerChoice === computerChoice) {
                 'The game is a tie'
-                return;
+                return; 
+            }
             if  (playerChoice === 'rock', computerChoice = 'scissors' || 'lizard') {
                 'You win',
                 playerScore++
                 return;
 
-            } else {'You lose a life'
+            } else {
+            'You lose a life'
             lives--
             return;
         }
@@ -51,29 +62,28 @@ const game = () => {
    
 
 
+playMatch();
 
 
 
     }
-
-
-
-
-    playMatch();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
 game();
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
