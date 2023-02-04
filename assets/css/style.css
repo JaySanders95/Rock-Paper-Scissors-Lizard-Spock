@@ -117,4 +117,13 @@ div.options {
     pointer-events: none;
 }
 
+img.players-selection {
+    width:200px;
+    height:200px;
+}
+
+img.computers-selection {
+    width:200px;
+    height:200px;
+}
 

@@ -21,7 +21,7 @@ const game = () => {
     const playMatch = () => {
         const options = document.querySelectorAll('.options button');
         const playerChoice = document.querySelector('.players-selection');
-        const computerChoice = document.getElementsByClassName('computers-selection');
+        const computerChoice = document.querySelector('.computers-selection');
         const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
         //Randomly computer generated pick for the computer
         options.forEach(option => {
@@ -29,7 +29,10 @@ const game = () => {
                 let randomNumber = Math.floor(Math.random() * 5);
                 let computerPicks = computerSelections[randomNumber];
                 
+                console.log(computerPicks);
+                
                 playerChoice.src = `../assets/images/${this.textContent}.jpg`;
+                computerChoice.src = `../assets/images/${computerPicks}.jpg`;
             })
         })
     }
