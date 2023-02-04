@@ -9,8 +9,6 @@ const game = () => {
         const rules = document.querySelector('.rules');
         const match = document.querySelector('.match');
 
-    console.log(match, "this is match");
-
         letsPlay.addEventListener('click', () => {
             rules.classList.add("fadeOut");
             match.classList.add("fadeIn");
@@ -21,22 +19,21 @@ const game = () => {
 
 
     const playMatch = () => {
-        const options = document.getElementsByClassName('buttonStyle');
+        const options = document.querySelectorAll('.options button');
         const playerChoice = document.getElementsByClassName('players-selection');
         const computerChoice = document.getElementsByClassName('computers-selection');
         const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-            console.log(playerChoice,'this is player choice');
-            console.log(computerChoice,'this is computerss choice');
+        console.log(options);
 
-        options.forEach(option => {
-            option.addEventListener('click', function () {
-                let randomNumber = Math.floor(Math.random() * 5);
+        //Randomly computer generated pick for the computer
+        let randomNumber = Math.floor(Math.random() * 5);
                 let computerPicks = computerSelections[randomNumber];
                 console.log(computerPicks);
-            });
-        });
 
+        
+
+        
     };
 
     const decideWinner = (playerChoice, computerChoice) => {

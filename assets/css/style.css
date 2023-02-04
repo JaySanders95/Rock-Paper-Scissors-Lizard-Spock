@@ -93,7 +93,7 @@ div.options {
     padding-top: 20px;
 }
 
-.buttonstyle {
+.options button {
     border:none;
     color: rgb(236, 227, 227);
     background-color: red;
