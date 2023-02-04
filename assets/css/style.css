@@ -108,6 +108,7 @@ div.options {
 .fadeIn {
     opacity: 1;
     pointer-events: all;
+    transition: 1.5s;
 }
 
 
