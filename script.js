@@ -20,72 +20,112 @@ const game = () => {
 
     const playMatch = () => {
         const options = document.querySelectorAll('.options button');
-        const playerChoice = document.getElementsByClassName('players-selection');
+        const playerChoice = document.querySelector('.players-selection');
         const computerChoice = document.getElementsByClassName('computers-selection');
         const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
         //Randomly computer generated pick for the computer
-        options.forEach(option => { 
-            option.addEventListener('click', function() {
-              let randomNumber = Math.floor(Math.random() * 5);  
-              let computerPicks = computerSelections[randomNumber];
-              console.log(computerPicks);
-            })})
-        }
-    
-
-
-        
-        
+        options.forEach(option => {
+            option.addEventListener('click', function () {
+                let randomNumber = Math.floor(Math.random() * 5);
+                let computerPicks = computerSelections[randomNumber];
                 
-               
+                playerChoice.src = `../assets/images/${this.textContent}.jpg`;
+            })
+        })
+    }
 
-      
 
-           // if its a draw     
-         const decideWinner = (playerChoice, computerChoice) => {
-            if (playerChoice === computerChoice) {
-                'The game is a tie'
-                return; 
-            }
 
-            //if player chooses rock
-            if  (playerChoice === 'rock', computerChoice = 'scissors' || 'lizard') {
-                'You win',
-                playerScore++
-                return;
 
-            } else {
+
+
+
+
+
+
+    // if its a draw     
+    const decideWinner = (playerChoice, computerChoice) => {
+        if (playerChoice === computerChoice) {
+            'The game is a tie'
+            return;
+        }
+
+        //if player chooses rock
+        if (playerChoice === 'rock') 
+         if (computerChoice = 'scissors' || 'lizard') {
+            'You win',
+            playerScore++
+            return;
+
+        }
+        else {
             'You lose a life'
             lives--
             return;
         }
+        
+        //if player chooses paper
+        if (playerChoice === 'paper') 
+        if (computerChoice = 'rock' || 'spock') {
+            'You win',
+            playerScore++
+            return;
+
+        }
+        else {
+            'You lose a life'
+            lives--
+            return;
+        }
+        //if player chooses scissors
+        if (playerChoice === 'scissors') 
+        if (computerChoice = 'paper' || 'lizard') {
+            'You win',
+            playerScore++
+            return;
+
+        }
+        else {
+            'You lose a life'
+            lives--
+            return;
+        }
+        //if player chooses lizard
+        if (playerChoice === 'lizard')
+        if (computerChoice = 'paper' || 'spock') {
+            'You win',
+            playerScore++
+            return;
+
+        }
+        else {
+            'You lose a life'
+            lives--
+            return;
+        }
+        //if player chooses spock
+        if  (playerChoice === 'spock')
+        if (computerChoice = 'scissors' || 'rock') {
+            'You win',
+            playerScore++
+            return;
+
+        } else {
+        'You lose a life'
+        lives--
+        return;
+    }
+
     };
 
-   
-
-
-playMatch();
+    decideWinner();
 
 
 
-    }
+
+    playMatch();
+
+
+
+}
 game();
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
