@@ -47,6 +47,8 @@ const game = () => {
                 'The game is a tie'
                 return; 
             }
+
+            //if player chooses rock
             if  (playerChoice === 'rock', computerChoice = 'scissors' || 'lizard') {
                 'You win',
                 playerScore++
