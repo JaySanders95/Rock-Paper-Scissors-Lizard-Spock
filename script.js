@@ -133,13 +133,17 @@ const game = () => {
               else if (computerPicks === 'rock') {
                 winner.textContent = "You win";
                 return;
+              }  
+              else if (computerPicks === 'paper') {
+                winner.textContent = "Loser";
+                return;
+              }  
+              else if (computerPicks === 'lizard') {
+                winner.textContent = "Lsoer";
+                return;
               }  }
             
-             else{
-                winner.textContent = 'You lose a life';
-                
-                return;
-            } 
+           
     
     };
     decideWinner();
