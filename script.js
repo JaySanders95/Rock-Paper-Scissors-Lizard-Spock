@@ -15,120 +15,141 @@ const game = () => {
         });
     }
 
-    startGame();
+  
 
 
     const playMatch = () => {
         const options = document.querySelectorAll('.options button');
         const playerChoice = document.querySelector('.players-selection');
+        
+        
+    
+
         const computerChoice = document.querySelector('.computers-selection');
         const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    
         //Randomly computer generated pick for the computer
         options.forEach(option => {
             option.addEventListener('click', function () {
+            
                 let randomNumber = Math.floor(Math.random() * 5);
                 let computerPicks = computerSelections[randomNumber];
-                
-                console.log(computerPicks);
-                
-                playerChoice.src = `../assets/images/${this.textContent}.jpg`;
-                computerChoice.src = `../assets/images/${computerPicks}.jpg`;
-            })
-        })
-    }
 
-
-
-
-
-
-
-
-
-
-    // if its a draw     
-    const decideWinner = (playerChoice, computerChoice) => {
-        if (playerChoice === computerChoice) {
-            'The game is a tie'
+                decideWinner(this.textContent, computerPicks);
+        
+                playerChoice.src = `./assets/images/${this.textContent}.jpg`;
+                console.log(playerChoice)
+                computerChoice.src = `./assets/images/${computerPicks}.jpg`;
+               
+               
+            });
+        });
+     
+};
+    
+   // if its a draw     
+   const decideWinner = (playerChoice, computerPicks) => {
+       const winner = document.querySelector('.win'); 
+    
+    
+        if (playerChoice === computerPicks) {
+            winner.textContent = "Tie!"
+            
             return;
         }
 
         //if player chooses rock
-        if (playerChoice === 'rock') 
-         if (computerChoice = 'scissors' || 'lizard') {
-            'You win',
-            playerScore++
-            return;
+        if (playerChoice === "rock"){
+            if (computerPicks == 'scissors'){
+                winner.textContent = "You win";
+                return;  
+              }
+              else if (computerPicks === 'lizard') {
+                winner.textContent = "You win";
+                return;
+              }   else {
+                winner.textContent = 'You lose a life';
+                
+                return;
+            } 
+            
+        }
 
-        }
-        else {
-            'You lose a life'
-            lives--
-            return;
-        }
-        
         //if player chooses paper
-        if (playerChoice === 'paper') 
-        if (computerChoice = 'rock' || 'spock') {
-            'You win',
-            playerScore++
-            return;
-
-        }
-        else {
-            'You lose a life'
-            lives--
-            return;
-        }
+        if (playerChoice === "paper"){
+            if (computerPicks === 'rock'){
+                winner.textContent = "You win";
+                return;
+              }
+              else if (computerPicks === 'spock') {
+                winner.textContent = "You win";
+                return;
+              }   else {
+                winner.textContent = 'You lose a life';
+                
+                return;
+            } 
+            
+             } 
         //if player chooses scissors
-        if (playerChoice === 'scissors') 
-        if (computerChoice = 'paper' || 'lizard') {
-            'You win',
-            playerScore++
-            return;
-
-        }
-        else {
-            'You lose a life'
-            lives--
-            return;
-        }
+        if (playerChoice === "scissors"){
+            if (computerPicks === 'paper'){
+                winner.textContent = "You win";
+                return;
+              }
+              else if (computerPicks === 'lizard') {
+                winner.textContent = "You win";
+                return;
+              }   else {
+                winner.textContent = 'You lose a life';
+                
+                return;
+            } 
+            
+             } 
         //if player chooses lizard
-        if (playerChoice === 'lizard')
-        if (computerChoice = 'paper' || 'spock') {
-            'You win',
-            playerScore++
-            return;
-
-        }
-        else {
-            'You lose a life'
-            lives--
-            return;
-        }
+        if (playerChoice === "lizard"){
+            if (computerPicks === 'paper'){
+                winner.textContent = "You win";
+                return;
+              }
+              else if (computerPicks === 'spock') {
+                winner.textContent = "You win";
+                return;
+              }   else {
+                winner.textContent = 'You lose a life';
+                
+                return;
+            } 
+            
+             } 
+        
         //if player chooses spock
-        if  (playerChoice === 'spock')
-        if (computerChoice = 'scissors' || 'rock') {
-            'You win',
-            playerScore++
-            return;
-
-        } else {
-        'You lose a life'
-        lives--
-        return;
-    }
-
+        if (playerChoice === "spock"){
+            if (computerPicks === 'scissors'){
+                winner.textContent = "You win";
+                return;
+              }
+              else if (computerPicks === 'rock') {
+                winner.textContent = "You win";
+                return;
+              }  }
+            
+             else{
+                winner.textContent = 'You lose a life';
+                
+                return;
+            } 
+    
     };
-
     decideWinner();
-
-
-
-
+    
+    startGame();
     playMatch();
 
+    }
+    game();
 
 
-}
-game();
+
+
