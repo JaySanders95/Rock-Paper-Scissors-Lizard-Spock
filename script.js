@@ -13,6 +13,7 @@ const game = () => {
       rules.style.opacity = "0";
       rules.style.pointerEvents = "none"
       match.style.opacity = "1" ;
+      match.style.transition = "all 1.5s";
       match.style.pointerEvents = "all";
     });
   }
@@ -47,14 +48,25 @@ const game = () => {
     const rules = document.querySelector('.rules');
     const match = document.querySelector('.match');
     const gameOver = document.querySelector('.gameOver');
-
-    rules.style.opacity = "0";
-    rules.style.pointerEvents = "none"
+    // removes match from screen and replaces with game over screen.
     match.style.opacity = "0";
     match.style.pointerEvents = "none"
     gameOver.style.opacity = "1";
     gameOver.style.pointerEvents = "all";
-    
+    gameOver.style.transition = "all 1.5s";
+
+    const resetButton = document.querySelector('.resetGame');
+    resetButton.addEventListener('click', () => {
+      match.style.opacity = "1";
+      match.style.transition = "all 1.5s";
+    match.style.pointerEvents = "all";
+    gameOver.style.opacity = "0";
+    gameOver.style.pointerEvents = "none";
+    lives = 5;
+    playerScore = 0;
+
+    });
+
 
 
     };
@@ -70,10 +82,6 @@ const game = () => {
     if (lives === 0) {
       reset();
       
-
-
-
-
     };
   };
 
