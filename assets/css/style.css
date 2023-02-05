@@ -10,12 +10,16 @@ body {
     color: rgb(236, 227, 227);
 }
 
+#score-section {
+    opacity: 1;
+}
+
 #game {
     display: flex;
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
-    opacity: 0;
+    
 }
 
 #game div p {
@@ -27,7 +31,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    opacity: 0;
+
 }
 .rules h2 {
     text-decoration: underline;
@@ -60,6 +64,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    opacity: 0;
     
    }
 
@@ -106,8 +111,8 @@ div.options {
 }
 
 .fadeIn {
-    opacity: 1 !important;
-    pointer-events: all !important;
+    opacity: 1;
+    pointer-events: all;
     transition: 1.5s;
 }
 
@@ -129,8 +134,8 @@ img.computers-selection {
 
 .gameOver {
     height: 300px;
-    width: 400px; 
-    position:absolute;
+    width: 400px;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -138,9 +143,10 @@ img.computers-selection {
     background-color: white;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     opacity: 0;
+    flex-direction: column; 
 }
 
 div.gameOver p {

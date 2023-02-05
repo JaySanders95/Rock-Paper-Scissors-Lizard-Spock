@@ -10,8 +10,10 @@ const game = () => {
     const match = document.querySelector('.match');
 
     letsPlay.addEventListener('click', () => {
-      rules.classList.add("fadeOut");
-      match.classList.add("fadeIn");
+      rules.style.opacity = "0";
+      rules.style.pointerEvents = "none"
+      match.style.opacity = "1" ;
+      match.style.pointerEvents = "all";
     });
   }
 // function for the actual gameplay
@@ -44,10 +46,16 @@ const game = () => {
   
     const rules = document.querySelector('.rules');
     const match = document.querySelector('.match');
+    const gameOver = document.querySelector('.gameOver');
 
+    rules.style.opacity = "0";
+    rules.style.pointerEvents = "none"
+    match.style.opacity = "0";
+    match.style.pointerEvents = "none"
+    gameOver.style.opacity = "1";
+    gameOver.style.pointerEvents = "all";
     
-      rules.classList.add("fadeIn");
-      match.classList.add("fadeOut");
+
 
     };
   
@@ -62,6 +70,7 @@ const game = () => {
     if (lives === 0) {
       reset();
       
+
 
 
 
