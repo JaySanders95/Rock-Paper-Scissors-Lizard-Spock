@@ -14,6 +14,11 @@
 <body>
 <!-- This section is where the scoreboard is and the amount of lives the user has remaining-->
   <section id="score-section">
+    <!-- This gives the user the option to go back to the rules mid-game-->
+    <nav>
+      <button class="rulesNav">Rules</button>
+      <button class="gameNav">Game</button>
+    </nav>
     <div id="game">
       <div id="score">
         <h2>Score</h2>
@@ -52,7 +57,7 @@
     <button id="lets-play">I'm Ready!</button>
   </section>
   <section>
-
+ <!-- This section is only activated when the user's lives go to 0-->
     <div class="gameOver">
       <p>You scored: </p>
       <button class="resetGame">Restart Game</button>
@@ -64,11 +69,12 @@
       <div>
     </div>
       <div class="selection">
-      <p>You</p>
+      <p>Player</p>
         <img class="players-selection" src="./assets/images/rock.jpg" alt="">
         <img class="computers-selection" src="./assets/images/rock.jpg" alt="">
         <p>Computer</p>
       </div>
+      <!-- The 5 buttons that the user can choose in the game-->
       <div class="options">
         <button class="rock">rock</button>
         <button class="paper">paper</button>

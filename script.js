@@ -3,6 +3,26 @@ const game = () => {
   let playerScore = 0;
   let lives = 5;
 
+  const rulesNav = document.querySelector('.rulesNav');
+  const gameNav = document.querySelector('.gameNav');
+  const rules = document.querySelector('.rules');
+  const match = document.querySelector('.match');
+
+  rulesNav.addEventListener('click', () => {
+    match.style.opacity = "0";
+    match.style.pointerEvents = "none"
+    rules.style.opacity = "1";
+    rules.style.transition = "all 1.5s";
+    rules.style.pointerEvents = "all";
+  });
+  gameNav.addEventListener('click', () => {
+    rules.style.opacity = "0";
+    rules.style.pointerEvents = "none"
+    match.style.opacity = "1";
+    match.style.transition = "all 1.5s";
+    match.style.pointerEvents = "all";
+  });
+
   //this function will remove the rules and start the game once called
   const startGame = () => {
     const letsPlay = document.getElementById('lets-play')
@@ -12,16 +32,16 @@ const game = () => {
     letsPlay.addEventListener('click', () => {
       rules.style.opacity = "0";
       rules.style.pointerEvents = "none"
-      match.style.opacity = "1" ;
+      match.style.opacity = "1";
       match.style.transition = "all 1.5s";
       match.style.pointerEvents = "all";
     });
   }
-// function for the actual gameplay
+  // function for the actual gameplay
   const playMatch = () => {
     const options = document.querySelectorAll('.options button');
     const playerChoice = document.querySelector('.players-selection');
-
+    //allows the computer to choose from an array for their selection
     const computerChoice = document.querySelector('.computers-selection');
     const computerSelections = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
@@ -44,8 +64,7 @@ const game = () => {
     });
   };
   const reset = () => {
-  
-    const rules = document.querySelector('.rules');
+
     const match = document.querySelector('.match');
     const gameOver = document.querySelector('.gameOver');
     // removes match from screen and replaces with game over screen.
@@ -54,23 +73,20 @@ const game = () => {
     gameOver.style.opacity = "1";
     gameOver.style.pointerEvents = "all";
     gameOver.style.transition = "all 1.5s";
-
+    //Removes game over screen and starts game again, resetting the players score and the lives.
     const resetButton = document.querySelector('.resetGame');
     resetButton.addEventListener('click', () => {
       match.style.opacity = "1";
       match.style.transition = "all 1.5s";
-    match.style.pointerEvents = "all";
-    gameOver.style.opacity = "0";
-    gameOver.style.pointerEvents = "none";
-    lives = 5;
-    playerScore = 0;
+      match.style.pointerEvents = "all";
+      gameOver.style.opacity = "0";
+      gameOver.style.pointerEvents = "none";
+      lives = 5;
+      playerScore = 0;
 
     });
+  };
 
-
-
-    };
-  
 
   //This function will update the score and the lives for the user
   const scoreboard = () => {
@@ -81,7 +97,7 @@ const game = () => {
 
     if (lives === 0) {
       reset();
-      
+
     };
   };
 

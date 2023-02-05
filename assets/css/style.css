@@ -9,41 +9,70 @@ body {
     background-color: rgb(12, 93, 214);
     color: rgb(236, 227, 227);
 }
+/* Navigation bar for the user to switch between the rules and the game */
+#score-section nav {
+    list-style: none;
+    font-size: 30px;
+    background-color: rgb(82, 79, 79);
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    height: 90px;
+}
 
+#score-section nav > button {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;    
+}
+
+/* This is the top of the page, where the UI displays lives remaining and score */
 #score-section {
     opacity: 1;
 }
 
 p.scoreCount {
-    font-size:50px;
+    font-size: 50px;
 }
+
 p.livesRemaining {
-    font-size:50px;
+    font-size: 50px;
 }
 
-
+/* This part contains the entire game, including the images of both 
+the computer and the user, the 5 option buttons and the text */
 #game {
     display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
-    
+    justify-content: space-evenly;
+
 }
 
 #game div p {
     text-align: center;
 }
 
+/* This part contains the rules of the game, with a picture of the possible
+moves and the button for starting the game. */
 .rules {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
 }
+
 .rules h2 {
     text-decoration: underline;
-    padding:25px;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.rules p {
+    font-size: 20px;
 }
 
 .rules img {
@@ -58,23 +87,26 @@ p.livesRemaining {
 
 
 #lets-play {
-    border:none;
     color: rgb(236, 227, 227);
     background-color: red;
-    width: 80px;
-    height: 45px;
+    width: 150px;
+    height: 50px;
     cursor: pointer;
+    font-size: 25px;
+    border: none;
+    border-radius: 3%;
 }
 
+/* This part specifically contains the main game part */
 .match {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     opacity: 0;
-    
-   }
+
+}
 
 h2.win {
     text-align: center;
@@ -83,7 +115,7 @@ h2.win {
 }
 
 
-div.selection  {
+div.selection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +123,7 @@ div.selection  {
     padding-right: 40px;
 }
 
-}
+
 
 div.selection p {
     font-size: 50px;
@@ -123,29 +155,17 @@ div.options {
     font-size: 30px;
 
 }
-
-.fadeIn {
-    opacity: 1;
-    pointer-events: all;
-    transition: 1.5s;
-}
-
-
-.fadeOut {
-    opacity: 0;
-    pointer-events: none;
-}
-
+/* The players selection and the computers selection */
 img.players-selection {
-    width:200px;
-    height:200px;
+    width: 200px;
+    height: 200px;
 }
 
 img.computers-selection {
-    width:200px;
-    height:200px;
+    width: 200px;
+    height: 200px;
 }
-
+/* This part contains the pop up box once the game has ended */
 .gameOver {
     height: 300px;
     width: 400px;
@@ -160,18 +180,18 @@ img.computers-selection {
     justify-content: space-around;
     align-items: center;
     opacity: 0;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 div.gameOver p {
-    font-size: 35px;
-    font-weight: 600px;
+    font-size: 50px;
 }
 
 .resetGame {
     color: white;
     background-color: green;
     cursor: pointer;
-    width: 90px;
+    width: 150px;
     height: 60px;
+    font-size: 20px;
 }
