@@ -247,10 +247,7 @@ footer p {
     }
     
     @media screen and (max-width: 400px) {
-        div.gameOver {
-            height: 150px;
-            width: 200px;
-        }
+        
 
         .rules p {
             font-size: 1px;
@@ -259,11 +256,19 @@ footer p {
         .rules img {
             background-size: contain;
         }
+        .resetGame {
+            height: 53px;
+            width: 111px;
+        }
     }
     @media screen and (max-width: 500px) {
         div.gameOver {
-            height: 175px;
+            height: 150px;
             width: 200px;
+            
+        }
+        div.gameOver p {
+            font-size: 31px;
         }
 
         .rules p {
