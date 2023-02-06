@@ -7,13 +7,21 @@ const game = () => {
   const gameNav = document.querySelector('.gameNav');
   const rules = document.querySelector('.rules');
   const match = document.querySelector('.match');
+  const gameOver = document.querySelector('.gameOver');
+
 
   rulesNav.addEventListener('click', () => {
     match.style.opacity = "0";
-    match.style.pointerEvents = "none"
+    match.style.pointerEvents = "none";
     rules.style.opacity = "1";
     rules.style.transition = "all 1.5s";
     rules.style.pointerEvents = "all";
+    gameOver.style.opacity = "0";
+    gameOver.pointerEvents = "none";
+    if (lives === 0) {
+     playerScore = 0;
+      lives = 5;
+    }
   });
   gameNav.addEventListener('click', () => {
     rules.style.opacity = "0";
@@ -21,6 +29,13 @@ const game = () => {
     match.style.opacity = "1";
     match.style.transition = "all 1.5s";
     match.style.pointerEvents = "all";
+    gameOver.style.opacity = "0";
+    gameOver.pointerEvents = "none";
+    if (lives === 0) {
+      playerScore = 0;
+       lives = 5;
+     }
+    
   });
 
   //this function will remove the rules and start the game once called
