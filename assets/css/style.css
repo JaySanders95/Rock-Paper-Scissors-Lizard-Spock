@@ -9,6 +9,7 @@ body {
     background-color: rgb(12, 93, 214);
     color: rgb(236, 227, 227);
 }
+
 /* Navigation bar for the user to switch between the rules and the game */
 #score-section nav {
     list-style: none;
@@ -23,11 +24,11 @@ body {
     height: 90px;
 }
 
-#score-section nav > button {
+#score-section nav>button {
     background-color: red;
     color: white;
     font-size: 30px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 /* This is the top of the page, where the UI displays lives remaining and score */
@@ -49,6 +50,7 @@ the computer and the user, the 5 option buttons and the text */
     display: flex;
     justify-content: space-evenly;
 
+
 }
 
 #game div p {
@@ -62,6 +64,7 @@ moves and the button for starting the game. */
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 15px;
 
 }
 
@@ -155,6 +158,7 @@ div.options {
     font-size: 30px;
 
 }
+
 /* The players selection and the computers selection */
 img.players-selection {
     width: 200px;
@@ -165,6 +169,7 @@ img.computers-selection {
     width: 200px;
     height: 200px;
 }
+
 /* This part contains the pop up box once the game has ended */
 .gameOver {
     height: 300px;
@@ -194,4 +199,90 @@ div.gameOver p {
     width: 150px;
     height: 60px;
     font-size: 20px;
+}
+
+footer {
+    background-color: rgb(82, 79, 79);
+
+
+}
+
+footer i {
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding-left: 20px;
+    text-align: center;
+    bottom: 0;
+}
+
+footer a {
+    margin: auto 0;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 5px;
+    text-align: center;
+
+}
+
+/* Media Queries for different display sizes*/
+
+@supports (display: flex) {
+    @media screen and (max-width: 900px) {
+        .rules h2 {
+            font-size: 20px;
+        }
+
+        .rules p {
+            font-size: 15px;
+        }
+
+        div.selection {
+            flex: 2;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        div.options {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+        }
+
+        .options button {
+            border: none;
+            color: rgb(236, 227, 227);
+            background-color: red;
+            width: 80px;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5%;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        h2.win {
+            text-align: center;
+            font-size: 34px;
+            padding-top: 140px;
+        }
+
+    }
+
+    @media screen and (max-width: 500px) {
+        .gameOver {
+            height: 200px;
+            width: 300px;
+        }
+        .rules p {
+            font-size: 12px;
+        }
+    }
 }
