@@ -25,7 +25,7 @@ const game = () => {
   });
   gameNav.addEventListener('click', () => {
     rules.style.opacity = "0";
-    rules.style.pointerEvents = "none"
+    rules.style.pointerEvents = "none";
     match.style.opacity = "1";
     match.style.transition = "all 1.5s";
     match.style.pointerEvents = "all";
@@ -40,18 +40,18 @@ const game = () => {
 
   //this function will remove the rules and start the game once called
   const startGame = () => {
-    const letsPlay = document.getElementById('lets-play')
+    const letsPlay = document.getElementById('lets-play');
     const rules = document.querySelector('.rules');
     const match = document.querySelector('.match');
 
     letsPlay.addEventListener('click', () => {
       rules.style.opacity = "0";
-      rules.style.pointerEvents = "none"
+      rules.style.pointerEvents = "none";
       match.style.opacity = "1";
       match.style.transition = "all 1.5s";
       match.style.pointerEvents = "all";
     });
-  }
+  };
   // function for the actual gameplay
   const playMatch = () => {
     const options = document.querySelectorAll('.options button');
@@ -84,7 +84,7 @@ const game = () => {
     const gameOver = document.querySelector('.gameOver');
     // removes match from screen and replaces with game over screen.
     match.style.opacity = "0";
-    match.style.pointerEvents = "none"
+    match.style.pointerEvents = "none";
     gameOver.style.opacity = "1";
     gameOver.style.pointerEvents = "all";
     gameOver.style.transition = "all 1.5s";
@@ -113,7 +113,7 @@ const game = () => {
     if (lives === 0) {
       reset();
 
-    };
+    }
   };
 
 
@@ -126,7 +126,7 @@ const game = () => {
 
 
     if (playerChoice === computerPicks) {
-      winner.textContent = "Tie!"
+      winner.textContent = "Tie!";
 
       return;
     }
@@ -262,5 +262,5 @@ const game = () => {
   startGame();
   playMatch();
 
-}
+};
 game();
