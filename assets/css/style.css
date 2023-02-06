@@ -49,6 +49,7 @@ the computer and the user, the 5 option buttons and the text */
 #game {
     display: flex;
     justify-content: space-evenly;
+    margin: 0;
 
 
 }
@@ -203,7 +204,9 @@ div.gameOver p {
 
 footer {
     background-color: rgb(82, 79, 79);
-
+    bottom: 0px !important;
+    left: 0px !important;
+    height: auto;
 
 }
 
@@ -213,7 +216,7 @@ footer i {
     height: 40px;
     padding-left: 20px;
     text-align: center;
-    bottom: 0;
+
 }
 
 footer a {
@@ -230,6 +233,86 @@ footer p {
 /* Media Queries for different display sizes*/
 
 @supports (display: flex) {
+    @media screen and (max-width: 300px) {
+        .options button {
+        border: solid black 2px;
+            color: rgb(236, 227, 227);
+            background-color: red;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            border-radius: 5%;
+            font-size: 7px;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        div.gameOver {
+            height: 150px;
+            width: 200px;
+        }
+
+        .rules p {
+            font-size: 1px;
+        }
+
+        .rules img {
+            background-size: contain;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        div.gameOver {
+            height: 175px;
+            width: 200px;
+        }
+
+        .rules p {
+            font-size: 12px;
+        }
+
+        img.computer-selection {
+            height: 150px;
+            width: 150px;
+        }
+
+        img.player-selection {
+            height: 150px;
+            width: 150px;
+        }
+
+        div.selection p {
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+
+        h2.win {
+            padding: 125px 0 0 0;
+            font-size: 30px;
+        }
+
+        .rules img {
+            background-size: contain;
+        }
+        .options button {
+            width: 25px;
+            font-size: 20px;
+        }
+        p.livesRemaining {
+            font-size: 30px;
+        }
+        div#lives h2 {
+            font-size: 20px;
+        }
+
+        p.scoreCount {
+            font-size: 30px;
+        }
+        div#score h2 {
+            font-size: 20px;
+        }
+
+    }
+
     @media screen and (max-width: 900px) {
         .rules h2 {
             font-size: 20px;
@@ -276,13 +359,99 @@ footer p {
 
     }
 
-    @media screen and (max-width: 500px) {
-        .gameOver {
-            height: 200px;
-            width: 300px;
+    
+
+    @media screen and (min-height: 844px) {
+        footer {
+            padding-top: 50px;
         }
+    }
+
+
+    @media screen and (min-height: 1000px) {
+        footer {
+            height: 100px;
+        }
+
         .rules p {
-            font-size: 12px;
+            font-size: 20px;
         }
+
+        .rules h2 {
+            font-size: 27.5px;
+        }
+    }
+
+    @media screen and (max-height: 700px),
+    (min-width: 500px) {
+        #score-section nav>button {
+            height: 20px;
+            font-size: 15px;
+        }
+
+        #score-section nav {
+            height: 50px;
+        }
+
+        #game div p {
+            font-size: 20px;
+        }
+
+        #game div h2 {
+            font-size: 25px;
+        }
+
+
+    }
+
+    @media screen and (min-height: 1024px),
+    (min-width:800px) {
+        .rules {
+            padding-bottom: 40px;
+        }
+
+        .rules img {
+            width: 500px;
+        }
+
+
+        footer {
+            height: 120px;
+        }
+
+        .rules p {
+            font-size: 25px;
+        }
+
+        .rules h2 {
+            font-size: 35px;
+        }
+
+        footer p {
+            font-size: 25px;
+        }
+
+        #score-section nav>button {
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            height: 40px;
+
+        }
+
+        #score-section nav {
+            list-style: none;
+            font-size: 30px;
+            background-color: rgb(82, 79, 79);
+            border-bottom: 5px solid black;
+            border-top: 5px solid black;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column-reverse;
+            height: 90px;
+        }
+
     }
 }
