@@ -101,6 +101,11 @@ moves and the button for starting the game. */
     border-radius: 3%;
 }
 
+#lets-play a {
+    text-decoration: none;
+    color: white;
+}
+
 /* This part specifically contains the main game part */
 .match {
     position: absolute;
@@ -416,7 +421,7 @@ footer p {
         }
 
         .rules img {
-            width: 500px;
+            background-size: contain;
         }
 
 
@@ -425,7 +430,7 @@ footer p {
         }
 
         .rules p {
-            font-size: 25px;
+            font-size: 22px;
         }
 
         .rules h2 {
