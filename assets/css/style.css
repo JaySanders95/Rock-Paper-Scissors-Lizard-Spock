@@ -1,7 +1,7 @@
 * {
     margin: 0;
     border: none;
-    padding: none;
+    padding: 0;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 #score-section nav {
     list-style: none;
     font-size: 30px;
-    background-color: rgb(82, 79, 79);
+    background-color: rgb(26, 25, 25);
     border-bottom: 5px solid black;
     border-top: 5px solid black;
     text-decoration: none;
@@ -26,7 +26,8 @@ body {
 }
 
 #score-section nav>button {
-    background-color: red;
+    background-color: rgb(82, 79, 79);
+    border: 2px black solid;
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -458,8 +459,6 @@ footer p {
         }
 
         #score-section nav>button {
-            background-color: red;
-            color: white;
             font-size: 30px;
             cursor: pointer;
             height: 40px;
@@ -469,10 +468,6 @@ footer p {
         #score-section nav {
             list-style: none;
             font-size: 30px;
-            background-color: rgb(82, 79, 79);
-            border-bottom: 5px solid black;
-            border-top: 5px solid black;
-            text-decoration: none;
             display: flex;
             justify-content: space-around;
             flex-direction: column-reverse;
