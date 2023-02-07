@@ -8,6 +8,7 @@ body {
     font-family: Calibri;
     background-color: rgb(12, 93, 214);
     color: rgb(236, 227, 227);
+
 }
 
 /* Navigation bar for the user to switch between the rules and the game */
@@ -49,7 +50,8 @@ the computer and the user, the 5 option buttons and the text */
 #game {
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
+    margin: 0 auto;
+
 
 
 }
@@ -121,6 +123,7 @@ h2.win {
     text-align: center;
     font-size: 70px;
     padding: 50px;
+    overflow: hidden;
 }
 
 
@@ -240,7 +243,7 @@ footer p {
 @supports (display: flex) {
     @media screen and (max-width: 300px) {
         .options button {
-        border: solid black 2px;
+            border: solid black 2px;
             color: rgb(236, 227, 227);
             background-color: red;
             width: 30px;
@@ -250,10 +253,8 @@ footer p {
             font-size: 7px;
         }
     }
-    
-    @media screen and (max-width: 400px) {
-        
 
+    @media screen and (max-width: 400px) {
         .rules p {
             font-size: 1px;
         }
@@ -261,17 +262,19 @@ footer p {
         .rules img {
             background-size: contain;
         }
+
         .resetGame {
             height: 53px;
             width: 111px;
         }
     }
+
     @media screen and (max-width: 500px) {
         div.gameOver {
             height: 150px;
             width: 200px;
-            
         }
+
         div.gameOver p {
             font-size: 31px;
         }
@@ -303,13 +306,16 @@ footer p {
         .rules img {
             background-size: contain;
         }
+
         .options button {
             width: 25px;
             font-size: 20px;
         }
+
         p.livesRemaining {
             font-size: 30px;
         }
+
         div#lives h2 {
             font-size: 20px;
         }
@@ -317,6 +323,7 @@ footer p {
         p.scoreCount {
             font-size: 30px;
         }
+
         div#score h2 {
             font-size: 20px;
         }
@@ -369,7 +376,7 @@ footer p {
 
     }
 
-    
+
 
     @media screen and (min-height: 844px) {
         footer {
@@ -390,6 +397,15 @@ footer p {
         .rules h2 {
             font-size: 27.5px;
         }
+    }
+
+    @media screen and (max-height: 650px),
+    (max-width: 350px) {
+        h2.win {
+            padding: 300px 0 0 0;
+
+        }
+
     }
 
     @media screen and (max-height: 700px),
