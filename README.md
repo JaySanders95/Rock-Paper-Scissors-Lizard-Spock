@@ -21,7 +21,7 @@ The entire game is defined within a single function called 'game'.
 - If a player clicks one of these after the game has ended, there is an 'if' loop that will prevent the game from bugging.
 
 ## SCORE SECTION
-![](assets/images/Footer.jpg)
+![](assets/images/scoreboard.jpg)
 - This is displayed at the top of the screen, split evenly across the screen and will render smaller or larger depending on the size of the device it is being displayed on.
 - The 'score' section starts at '0' and every time a player wins the score increases, this is done by using incrementation on the integer(++).
 - The 'lives' section starts at '5'and every time a player loses the lives decrease, this is done by using decrementation on the integer(--).
@@ -103,17 +103,19 @@ The entire game is defined within a single function called 'game'.
 - CSS passes the validation checks through the official Jigsaw validator.
 
 ### JavaScript
--Javascript passes the validation through the official Jshint website, the warnings only related to extensions.
+- Javascript passes the validation through the official Jshint website, the warnings only related to extensions.
 
 ## Accessibility
-- The scores for lighthouse were as follows; they were very good.
-![](assets/images/Lighthouse2.jpg) ![](assets/images/bestPractices1.jpg)
+- The scores for lighthouse were as follows; they were very good. no major issues that weren't fixed.
+![](assets/images/Lighthouse2.jpg) 
+
+
 
 
 ## Deployment
 - The site was deployed to Github pages, the steps were as follows;
-- In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
-- In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
+- - In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
+- - In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
 
 The link for my page is here:
 
