@@ -20,7 +20,7 @@ The entire game is defined within a single function called 'game'.
 - These two buttons act as event listeners, which when clicked add/remove opacity and cursor events.
 - If a player clicks one of these after the game has ended, there is an 'if' loop that will prevent the game from bugging.
 
-## SCORE SECTION#
+## SCORE SECTION
 ![](assets/images/Footer.jpg)
 - This is displayed at the top of the screen, split evenly across the screen and will render smaller or larger depending on the size of the device it is being displayed on.
 - The 'score' section starts at '0' and every time a player wins the score increases, this is done by using incrementation on the integer(++).
@@ -76,43 +76,52 @@ The entire game is defined within a single function called 'game'.
 -The links are that of my own and will take the user to my Github page/LinkedIn profile.
 
 
-# Testing
+## Testing
 - I tested this page across multiple devices and multiple browsers, The rendering of all elements was satisfactory upon multiple tests.
 - I can confirm that the page rendered satisfactory across all devices.
 - I can also confirm that all of the buttons worked across all devices, navigation took the users to the correct place and the game played as intended.
 - I can confirm the game will reset upon being asked to.
 
-# Key project goals
+## Key project goals
 - The desired outcome of this project was to create a simple game of chance that will keep the user occupied for hours, if i had more time i would have liked to included 2 more difficulties, one easier with 2 less lives and one easier with 5 extra lives. I would have also liked to include a scoreboard that would allow recent players to see their most recent scores.
 
 ## Bugs
-- In development, i encountered mutliple bugs and fixed almost all of them:
-- - The scoreboard would not work correctly, it would add multiple values to the score when only one outcome was selected, this was due to the function assuming the player had selected multiple choices for one click. I fixed this bug by creating an If selection for each and an if else selection for each, rather than just an IF/Else. This would also affect what text was displayed upon selecting and was fixed when the if else was changed.
-- - The game would not run entirely, this was fixed because the game() function was not being called.
-- - The images would not load correctly when selected, this was because the value attached did not match the selection. i fixed this by adding a decideWinner() function that called two arguments, this.textContent & computerPicks variables.
-- - When the User's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
+### In development, i encountered mutliple bugs and fixed almost all of them:
+- The scoreboard would not work correctly, it would add multiple values to the score when only one outcome was selected, this was due to the function assuming the player had selected multiple choices for one click. I fixed this bug by creating an If selection for each and an if else selection for each, rather than just an IF/Else. This would also affect what text was displayed upon selecting and was fixed when the if else was changed.
+- The game would not run entirely, this was fixed because the game() function was not being called.
+- The images would not load correctly when selected, this was because the value attached did not match the selection. i fixed this by adding a decideWinner() function that called two arguments, this.textContent & computerPicks variables.
+- When the User's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
 
-- Some were not fixed, and rather i had a workaround for them:
-- - When rendered to different sizes, the page h2 will sometimes bug through the nav bar, i amended the different sizes based on width and height and tried to accomodate all of the sizes with extra padding so it does not do this.
-- -When displayed on certain viewport widths, the footer will have a gap, it is hard to determine whether this will truly occur as i have seen on two different devices the viewport for a certain device and both show differently.
+### Some were not fixed, and rather i had a workaround for them:
+- When rendered to different sizes, the page h2 will sometimes bug through the nav bar, i amended the different sizes based on width and height and tried to accomodate all of the sizes with extra padding so it does not do this.
+- When displayed on certain viewport widths, the footer will have a gap, it is hard to determine whether this will truly occur as i have seen on two different devices the viewport for a certain device and both show differently.
 
-# Validator testing
-## HTML
+## Validator testing
+### HTML
 - HTML passes the validation checks through the official W3C validator. There was only one warning that there was an empty H2 tag, which was intentional.
-## CSS
+### CSS
 - CSS passes the validation checks through the official Jigsaw validator.
 
-## JavaScript
+### JavaScript
 -Javascript passes the validation through the official Jshint website, the warnings only related to extensions.
 
-# Accessibility
+## Accessibility
 - The scores for lighthouse were as follows; they were very good.
 ![](assets/images/Lighthouse2.jpg) ![](assets/images/bestPractices1.jpg)
 
 
-# Deployment
+## Deployment
 - The site was deployed to Github pages, the steps were as follows;
--- In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
-- - In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
+- In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
+- In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
 
 The link for my page is here:
+
+## Credits
+- The images used for this project were taken from google including rock.jpg, lizard.jpg, scissors.jpg, paper.jpg & spock.jpg.
+- The icons for my social media links were taken from FontAwesome.
+- The image used in the rules section (RPSLS.jpg) was taken from PNG WING (https://www.pngwing.com/en/free-png-ycasl).
+- I used various youtube videos for ideas and help with how to tackle certain issues during this project, however these were basic games of chance/other rock paper scissors games:
+- - https://youtu.be/1yS-JV4fWqY
+- - https://youtu.be/fIBOydve2f8
+- - https://youtu.be/QQh8PNp8KcQ
