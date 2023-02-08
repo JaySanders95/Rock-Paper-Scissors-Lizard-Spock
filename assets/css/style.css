@@ -231,7 +231,8 @@ footer a {
 }
 
 footer p {
-    padding-top: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -299,6 +300,7 @@ footer p {
         h2.win {
             padding: 125px 0 0 0;
             font-size: 30px;
+            max-height: fit-content;
         }
 
         .rules img {
