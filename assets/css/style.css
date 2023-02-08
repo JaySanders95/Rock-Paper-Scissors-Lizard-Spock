@@ -23,6 +23,7 @@ body {
     justify-content: space-around;
     flex-direction: column-reverse;
     height: 90px;
+    width: 100%;
 }
 
 #score-section nav>button {
@@ -119,8 +120,10 @@ moves and the button for starting the game. */
 h2.win {
     text-align: center;
     font-size: 70px;
-    padding: 50px;
+    padding: 25px 0 25px 0;
     overflow: hidden;
+    display: inline-block;
+    width: 100%;
 }
 
 
