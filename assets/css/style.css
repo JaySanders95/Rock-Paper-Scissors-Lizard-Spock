@@ -216,7 +216,14 @@ footer {
     bottom: 0px !important;
     left: 0px !important;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
+}
+.fa-2xl {
+    width: 3rem;
 }
 
 footer i {
