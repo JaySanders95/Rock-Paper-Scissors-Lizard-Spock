@@ -120,6 +120,7 @@ The entire game is defined within a single function called 'game'.
 The link for my page is here:
 
 ## Credits
+- Re-used code from myself, the project beforehand. This was only basic code such as the FontAwesome script code.
 - The images used for this project were taken from google including rock.jpg, lizard.jpg, scissors.jpg, paper.jpg & spock.jpg.
 - The icons for my social media links were taken from FontAwesome.
 - The image used in the rules section (RPSLS.jpg) was taken from PNG WING (https://www.pngwing.com/en/free-png-ycasl).

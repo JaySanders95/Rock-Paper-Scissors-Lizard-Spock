@@ -19,7 +19,7 @@ const game = () => {
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
     if (lives === 0) {
-     playerScore = 0;
+      playerScore = 0;
       lives = 5;
     }
   });
@@ -33,9 +33,9 @@ const game = () => {
     gameOver.pointerEvents = "none";
     if (lives === 0) {
       playerScore = 0;
-       lives = 5;
-     }
-    
+      lives = 5;
+    }
+
   });
 
   //this function will remove the rules and start the game once called
@@ -79,7 +79,6 @@ const game = () => {
     });
   };
   const reset = () => {
-
     const match = document.querySelector('.match');
     const gameOver = document.querySelector('.gameOver');
     // removes match from screen and replaces with game over screen.
@@ -98,7 +97,6 @@ const game = () => {
       gameOver.style.pointerEvents = "none";
       lives = 5;
       playerScore = 0;
-
     });
   };
 
@@ -112,22 +110,15 @@ const game = () => {
 
     if (lives === 0) {
       reset();
-
     }
   };
-
-
-
-
 
   // if its a draw     
   const decideWinner = (playerChoice, computerPicks) => {
     const winner = document.querySelector('.win');
 
-
     if (playerChoice === computerPicks) {
       winner.textContent = "Tie!";
-
       return;
     }
 
@@ -253,14 +244,9 @@ const game = () => {
         return;
       }
     }
-
-
-
   };
   decideWinner();
-
   startGame();
   playMatch();
-
 };
 game();
