@@ -16,8 +16,9 @@ The entire game is defined within a single function called 'game'.
 - The background colour matches that of the footer, with white text to compliment it.
 - Clicking the 'rules' button will hide the current display (if not already on the rules section) and then display the rules, with a smooth transition time to add aesthetic.
 - Clicking the 'game' button will hide the current display (if not already on the game section) and then display the rules, with a smooth transition time to add aesthetic.
+- When either one of these are clicked, will alternate colour to green for the highlighted section and vice versa when the other is clicked.
 - Once rendered in a different size, the logo and the text will auto shrink in size to fit nicely for the user aesthetic.
-- When the user hovers over any of the links, the cursor will change to a pointer, promting the user that the links are clickable.
+- When the user hovers over any of the links, the cursor will change to a pointer, prompting the user that the links are clickable.
 - The color scheme for the clickable buttons at the top of the screen matches the footer of the page.
 - These two buttons act as event listeners, which when clicked add/remove opacity and cursor events.
 - If a player clicks one of these after the game has ended, there is an 'if' loop that will prevent the game from bugging.
