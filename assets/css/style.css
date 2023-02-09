@@ -268,6 +268,13 @@ footer p {
 
 @supports (display: flex) {
 
+    @media screen and (max-width: 300px) {
+        .rules{
+            width: 102px;
+            padding-bottom: 100px;
+        }
+    }
+
     @media screen and (max-width: 700px) {
         #score-section nav {
             font-size: 16px;
@@ -361,12 +368,19 @@ footer p {
         }
 
         #game {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 50px 20px 0 20px;
+        }
+
+        #game {
             font-size: 12px;
 
         }
         .rules {
             position: absolute;
-            top: 27rem;
+            top: 23rem;
             
         }
 
