@@ -38,21 +38,7 @@ const game = () => {
 
   });
 
-  //this function will remove the rules and start the game once called
-  const startGame = () => {
-    const letsPlay = document.getElementById('lets-play');
-    const rules = document.querySelector('.rules');
-    const match = document.querySelector('.match');
-
-    letsPlay.addEventListener('click', () => {
-      rules.style.opacity = "0";
-      rules.style.pointerEvents = "none";
-      match.style.opacity = "1";
-      match.style.transition = "all 1.5s";
-      match.style.pointerEvents = "all";
-    });
-  };
-  // function for the actual gameplay
+ // function for the actual gameplay
   const playMatch = () => {
     const options = document.querySelectorAll('.options button');
     const playerChoice = document.querySelector('.players-selection');
@@ -246,7 +232,6 @@ const game = () => {
     }
   };
   decideWinner();
-  startGame();
   playMatch();
 };
 game();

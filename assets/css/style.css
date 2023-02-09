@@ -12,6 +12,10 @@ body {
 }
 
 /* Navigation bar for the user to switch between the rules and the game */
+#header {
+    height: 100px;
+}
+
 #score-section nav {
     list-style: none;
     font-size: 30px;
@@ -66,7 +70,7 @@ moves and the button for starting the game. */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 15px;
+    height: 44rem;
 
 }
 
@@ -90,23 +94,6 @@ moves and the button for starting the game. */
     flex-direction: column;
 }
 
-
-#lets-play {
-    color: rgb(236, 227, 227);
-    background-color: red;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 25px;
-    border: none;
-    border-radius: 3%;
-}
-
-#lets-play a {
-    text-decoration: none;
-    color: white;
-}
-
 /* This part specifically contains the main game part */
 .match {
     position: absolute;
@@ -114,27 +101,36 @@ moves and the button for starting the game. */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+
     opacity: 0;
 }
 
 h2.win {
     text-align: center;
-    font-size: 70px;
-    padding: 25px 0 25px 0;
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
+    font-size: 50px;
+    width: 30%;
+    margin: 0 auto;
 }
 
 
 div.selection {
+    text-align: center;
+    width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
+#playergroup {
+    float: right;
+    width: 50%;
+}
+
+#compgroup {
+    float: left;
+    width: 27%;
+}
 
 
 div.selection p {
@@ -142,12 +138,20 @@ div.selection p {
 }
 
 img.computers-selection {
-    border-radius: 50%
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
 }
 
+
 img.players-selection {
-    border-radius: 50%
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
 }
+
 
 div.options {
     display: flex;
@@ -165,6 +169,7 @@ div.options {
     border-radius: 5%;
     font-weight: 600;
     font-size: 30px;
+    pointer-events: all;
 }
 
 /* The players selection and the computers selection */
@@ -193,6 +198,7 @@ img.computers-selection {
     justify-content: space-around;
     align-items: center;
     opacity: 0;
+    pointer-events: none;
     flex-direction: column;
 }
 
@@ -211,13 +217,14 @@ div.gameOver p {
 
 footer {
     background-color: rgb(82, 79, 79);
-    bottom: 0px !important;
-    left: 0px !important;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    position: static;
+
 }
 
 footer i {
@@ -240,236 +247,171 @@ footer p {
 }
 
 /* Media Queries for different display sizes*/
-/* These media queries are sorted by size (width, height, width & height)*/
+/* These media queries are sorted by size (width, height)*/
 
-@supports (display: flex) {
-    @media screen and (max-width: 300px) {
-        .options button {
-            border: solid black 2px;
-            color: rgb(236, 227, 227);
-            background-color: red;
-            width: 30px;
-            height: 20px;
-            cursor: pointer;
-            border-radius: 5%;
-            font-size: 7px;
-        }
-    }
+@supports (display: flex) { 
 
-    @media screen and (max-width: 400px) {
-        .rules p {
-            font-size: 1px;
-        }
+    @media screen and (max-width: 460px) {
 
-        .rules img {
-            background-size: contain;
-        }
-
-        .resetGame {
-            height: 53px;
-            width: 111px;
-        }
-    }
-
-    @media screen and (max-width: 500px) {
-        div.gameOver {
+        .gameOver {
             height: 150px;
             width: 200px;
         }
 
-        div.gameOver p {
-            font-size: 31px;
+        .rules img {
+            width: 190px;
+            background-size: contain;
+        }
+
+        .rules h2 {
+            font-size: 20px;
         }
 
         .rules p {
             font-size: 12px;
         }
 
-        img.computer-selection {
-            height: 150px;
-            width: 150px;
-        }
-
-        img.player-selection {
-            height: 150px;
-            width: 150px;
-        }
-
-        div.selection p {
-            font-size: 30px;
-            padding-bottom: 10px;
-        }
-
         h2.win {
-            padding: 125px 0 0 0;
-            font-size: 30px;
-            max-height: fit-content;
-        }
+            padding-top:20px;
 
-        .rules img {
-            background-size: contain;
-        }
-
-        .options button {
-            width: 25px;
-            font-size: 20px;
-        }
-
-        p.livesRemaining {
-            font-size: 30px;
-        }
-
-        div#lives h2 {
-            font-size: 20px;
-        }
-
-        p.scoreCount {
-            font-size: 30px;
-        }
-
-        div#score h2 {
-            font-size: 20px;
-        }
-
-    }
-
-    @media screen and (max-width: 900px) {
-        .rules h2 {
-            font-size: 20px;
-        }
-
-        .rules p {
-            font-size: 15px;
         }
 
         div.selection {
-            flex: 2;
-            padding: 0;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-direction: column;
+            height: 360px;
+            align-content: space-around;
         }
+    } 
 
-        div.options {
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            font-size: 16px;
-        }
-
-        .options button {
-            border: none;
-            color: rgb(236, 227, 227);
-            background-color: red;
-            width: 80px;
-            height: 30px;
-            cursor: pointer;
-            border-radius: 5%;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        h2.win {
-            text-align: center;
-            font-size: 34px;
-            padding-top: 140px;
-        }
-    }
-
-
-
-    @media screen and (min-height: 844px) {
-        footer {
-            padding-top: 50px;
-        }
-    }
-
-    @media screen and (min-height: 1000px) {
-        footer {
-            height: 100px;
-        }
-
+    @media screen and (max-width: 775px) {
         .rules p {
-            font-size: 20px;
-        }
-
-        .rules h2 {
-            font-size: 27.5px;
-        }
-    }
-
-    @media screen and (max-height: 650px),
-    (max-width: 350px) {
-        h2.win {
-            padding: 300px 0 0 0;
-        }
-    }
-
-    @media screen and (max-height: 700px),
-    (min-width: 500px) {
-        #score-section nav>button {
-            height: 20px;
-            font-size: 15px;
-        }
-
-        #score-section nav {
-            height: 50px;
-        }
-
-        #game div p {
-            font-size: 20px;
-        }
-
-        #game div h2 {
-            font-size: 25px;
-        }
-
-
-    }
-
-    @media screen and (min-height: 1024px),
-    (min-width:800px) {
-        .rules {
-            padding-bottom: 40px;
+            font-size: 15px
         }
 
         .rules img {
+            width: 200px;
             background-size: contain;
         }
 
-
-        footer {
-            height: 120px;
-        }
-
-        .rules p {
-            font-size: 22px;
-        }
-
-        .rules h2 {
-            font-size: 35px;
-        }
-
-        footer p {
-            font-size: 25px;
-        }
-
-        #score-section nav>button {
-            font-size: 30px;
-            cursor: pointer;
-            height: 40px;
-
-        }
-
-        #score-section nav {
-            list-style: none;
-            font-size: 30px;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column-reverse;
-            height: 90px;
+        .rules {
+            height: 34rem;
         }
 
     }
+
+    @media screen and (max-width: 800px) {
+        div.selection p {
+            font-size: 30px;
+        }
+
+        h2.win {
+            font-size: 35px;
+        }
+
+        img.computers-selection {
+            width: 120px;
+            height: 120px;
+        }
+
+        img.players-selection {
+            width: 120px;
+            height: 120px;
+        }
+
+        .options button {
+            width: 70px;
+            height: 30px;
+            border-radius: 0%;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 400px) {
+        .match {
+            margin-top: 40px;
+            }
+        div.selection {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 290px;
+            align-content: space-around;
+            flex-direction: row;}
+        #compgroup {
+            width: 73%;
+            text-align: center;
+        }
+
+        #playergroup {
+            width: 100%;
+            text-align: center;
+            height: 189px;
+        }
+    
+
+    .options button {
+        width: 52px;
+        height: 28px;
+        font-weight: 300;
+        font-size: 11px;
+    }
+
+    h2.win {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    div.selection {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 290px;
+        align-content: space-around;
+        flex-direction: row;
+    }
+    #game {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    }
+
+@media screen and (min-width: 820px) {
+    div.options {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 50px;
+        height: 75wv;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    div.selection {
+        margin-top: 190px;
+    }
+.match {
+    margin-top: 0px;
 }
+}
+@media screen and (min-width: 900px) {
+    .match {
+        margin-top: 40px;
+        height: 115vw;
+    }
+} 
+
+@media screen and (min-width: 1000px) {
+    .match {
+        margin-top: 330px;
+
+    }
+} }

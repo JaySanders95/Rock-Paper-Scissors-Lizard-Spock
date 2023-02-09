@@ -16,28 +16,28 @@
   <!-- This section is where the scoreboard is and the amount of lives the user has remaining-->
   <section id="score-section">
     <!-- This gives the user the option to go back to the rules mid-game-->
-    <nav>
-      <button class="rulesNav">Rules</button>
-      <button class="gameNav">Game</button>
-    </nav>
-    <div id="game">
-      <div id="score">
-        <h2>Score</h2>
-        <p class="scoreCount">0</p>
+    <header>
+      <nav id="header">
+        <button class="rulesNav">Rules</button>
+        <button class="gameNav">Game</button>
+      </nav>
+    </header>
+    <div>
+      <div id="game">
+        <div id="score">
+          <h2>Score</h2>
+          <p class="scoreCount">0</p>
+        </div>
+        <div id="lives">
+          <h2>Lives</h2>
+          <p class="livesRemaining">5</p>
+        </div>
       </div>
-      <div id="lives">
-        <h2>Lives remaining</h2>
-        <p class="livesRemaining">5</p>
-      </div>
-    </div>
   </section>
   <!-- This section contains the rules of the game -->
   <section class="rules">
-    <h2>Rock, Paper, Scissors, Lizard, Spock</h2>
+    <h2>Rules</h2>
     <div>
-      <p>You have 5 lives, each time you are beaten, you lose </p>
-      <p>a life. It is the well-known game of Rock, Paper, Scissors..</p>
-      <p>but with a twist!</p> <br>
       <p>
         -Rock beats both Scissors and Lizard, but is beaten by
         Paper and Spock- <br> <br>
@@ -48,12 +48,11 @@
         -Lizard beats Paper and Spock, but is beaten by
         Rock and Scissors-<br> <br>
         -Spock beats Scissors and Rock, but is beaten by
-        Lizard and Paper-<br> <br>
+        Lizard and Paper-
       </p>
-      <p>If thats all too confusing, this simple picture will help!</p>
     </div>
     <img src="./assets/images/RPSLS.jpg" alt="a picture showing the possible different outcomes for the game.">
-    <button id="lets-play">I'm Ready!</button>
+
   </section>
   <section>
     <!-- This section is only activated when the user's lives go to 0-->
@@ -63,13 +62,18 @@
     </div>
     <!--This section contains the actual match-->
     <div class="match">
-      <h2 class="win"></h2>
+
       <div class="selection">
-        <p>Player</p>
-        <img class="players-selection" src="./assets/images/rock.jpg" alt="">
-        <img class="computers-selection" src="./assets/images/rock.jpg" alt="">
-        <p>Computer</p>
+        <div id="playergroup">
+          <p>Player</p>
+          <img class="players-selection" src="./assets/images/rock.jpg" alt="">
+        </div>
+        <div id="compgroup">
+          <p>Computer</p>
+          <img class="computers-selection" src="./assets/images/rock.jpg" alt="">
+        </div>
       </div>
+      <h2 class="win"></h2>
       <!-- The 5 buttons that the user can choose in the game-->
       <div class="options">
         <button class="rock">rock</button>
@@ -78,7 +82,9 @@
         <button class="lizard">lizard</button>
         <button class="spock">spock</button>
       </div>
+
     </div>
+
   </section>
   <!-- Footer -->
   <footer>
