@@ -124,7 +124,7 @@ opacity: 0;
 
 h2.win {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     width: 30%;
     margin: 0 auto;
     opacity: 0;
@@ -322,7 +322,7 @@ footer p {
 
         h2.win {
             text-align: center;
-            font-size: 35px;
+            font-size: 27.5px;
             width: 100%;
         }
 
@@ -366,7 +366,7 @@ footer p {
         }
         .rules {
             position: absolute;
-            top:33rem;
+            top: 27rem;
             
         }
 

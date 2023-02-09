@@ -3,7 +3,7 @@
 RPSLS is a game of chance, where the user will choose a selection and have a 2/5 chance to win, 2/5 chance to lose and 1/5 chance to tie, all based on random number generated selections from the computer. The user is first given an in-sight on the rules of the game,
 with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the game button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are depleted, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
 The entire game is defined within a single function called 'game'.
-![](am i responsive picture when done)
+![](assets/images/amiresponsive.jpg)
 
 ## PAGE
 - The page is displayed on a blue background with mostly white text, and is viewed in Calibri. This is all text for the page to be displayed with this font.
@@ -88,6 +88,7 @@ The entire game is defined within a single function called 'game'.
 - I can confirm that the page rendered satisfactory across all devices.
 - I can also confirm that all of the buttons worked across all devices, navigation took the users to the correct place and the game played as intended.
 - I can confirm the game will reset upon being asked to.
+- During testing my friend on a bigger resolution size noted that there is blue under the footer, as my screen cannot go to that size i cannot check from my laptop. All of the responsive testing from the developer options showed no blue underneath
 
 ## Key project goals
 - The desired outcome of this project was to create a simple game of chance that will keep the user occupied for hours, if i had more time i would have liked to included 2 more difficulties, one easier with 2 less lives and one easier with 5 extra lives. I would have also liked to include a scoreboard that would allow recent players to see their most recent scores.
