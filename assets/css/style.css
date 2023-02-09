@@ -44,6 +44,7 @@ body {
     color: white;
     font-size: 30px;
     cursor: pointer;
+    width: 115px
 }
 
 /* This is the top of the page, where the UI displays lives remaining and score */
