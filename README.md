@@ -100,6 +100,7 @@ The entire game is defined within a single function called 'game'.
 - When the user's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
 - When rendering view sizes, i encountered bugs where buttons would not 'click' in certain resolutions, for this fix, i had to strip the CSS down and find out what was causing it, when i realised it was based on the values of the CSS itself, i had to delete and re-do the CSS.
 - When deployed, the buttons would only be clickable halfway up them, because a height wasnt defined. to fix this, i defined a height for the different viewports.
+- Scrollbar does not load in until a couple of seconds or when the play game function is clicked. This was not fixed.
 
 ### Some were not fixed, and rather i had a workaround for them:
 - When the user intentionally spams a selection in order to try to break the game, the value can go below 0. As a shortfix, the game will reset on -1. but if it it spammed fast enough it may break the game. i tested this multiple times and found it broke the game around every 1 in 30-40 tries.
