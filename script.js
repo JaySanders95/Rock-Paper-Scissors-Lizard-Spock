@@ -81,7 +81,6 @@ const game = () => {
     const resetButton = document.querySelector('.resetGame');
     resetButton.addEventListener('click', () => {
       match.style.opacity = "1";
-      match.style.transition = "all 1.5s";
       match.style.pointerEvents = "all";
       gameOver.style.opacity = "0";
       gameOver.style.pointerEvents = "none";
