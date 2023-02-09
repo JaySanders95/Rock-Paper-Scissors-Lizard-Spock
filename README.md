@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors, Lizard, Spock
 
 RPSLS is a game of chance, where the user will choose a selection and have a 2/5 chance to win, 2/5 chance to lose and 1/5 chance to tie, all based on random number generated selections from the computer. The user is first given an in-sight on the rules of the game,
-with a picture to help understand them. Then they are met with a "let's play button". After clicking the button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are deplated, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
+with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are deplated, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
 The entire game is defined within a single function called 'game'.
 ![](am i responsive picture when done)
 
@@ -9,8 +9,8 @@ The entire game is defined within a single function called 'game'.
 - The page is displayed on a blue background with mostly white text, and is viewed in Calibri. This is all text for the page to be displayed with this font.
 
 
-## NAVIGATION
-![](assets/images/NavBarJ.jpg)
+## HEADER
+![](assets/images/navbar.)
 - The Navigation bar is displayed at the top of the screen, it only gives the player two options as there are only two relevant options for the user to choose, 'rules' and 'game'.
 - Clicking the 'rules' button will hide the current display (if not already on the rules section) and then display the rules, with a smooth transition time to add aesthetic.
 - Clicking the 'game' button will hide the current display (if not already on the game section) and then display the rules, with a smooth transition time to add aesthetic.
