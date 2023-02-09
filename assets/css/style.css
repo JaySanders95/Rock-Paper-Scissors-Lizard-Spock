@@ -15,6 +15,15 @@ body {
 #header {
     height: 100px;
 }
+.rulesNav {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.gameNav {
+    opacity: 1;
+    pointer-events: all;
+}
 
 #score-section nav {
     list-style: none;
@@ -160,7 +169,7 @@ div.options {
 }
 
 .options button {
-    border: none;
+    border: black 3px solid;
     color: rgb(236, 227, 227);
     background-color: red;
     width: 150px;
@@ -403,15 +412,37 @@ footer p {
 }
 }
 @media screen and (min-width: 900px) {
-    .match {
-        margin-top: 40px;
-        height: 115vw;
+    h2.win {
+        position: absolute;
+        top: 50rem;
+        left: 28rem;
+    }
+    div.options {
+        position: absolute;
+    top: 52.5rem;
+    left: 16rem;
+    }
+    div.selection {
+        position: absolute;
+        top: 22.5rem;
     }
 } 
 
 @media screen and (min-width: 1000px) {
-    .match {
-        margin-top: 330px;
 
+    h2.win {
+        position: absolute;
+        top: 8rem;
+        left: 22rem;
     }
+    div.options {
+        position: absolute;
+    top: 13.5rem;
+    left: 8rem;
+    }
+    div.selection {
+        position: absolute;
+        top: -18.5rem;
+    }
+    
 } }
