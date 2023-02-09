@@ -8,7 +8,7 @@ const game = () => {
   const rules = document.querySelector('.rules');
   const match = document.querySelector('.match');
   const gameOver = document.querySelector('.gameOver');
-
+  const winner = document.querySelector('.win');
 
   rulesNav.addEventListener('click', () => {
     match.style.opacity = "0";
@@ -16,6 +16,7 @@ const game = () => {
     rules.style.opacity = "1";
     rules.style.transition = "all 1.5s";
     rules.style.pointerEvents = "all";
+    winner.style.opacity = "0";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
     rulesNav.style.backgroundColor = "green";
@@ -31,6 +32,7 @@ const game = () => {
     match.style.opacity = "1";
     match.style.transition = "all 1.5s";
     match.style.pointerEvents = "all";
+    winner.style.opacity = "1";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
     gameNav.style.backgroundColor = "green";
