@@ -90,8 +90,8 @@ moves and the button for starting the game. */
     top: 52%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 40%;
-    padding-bottom: 70px;
+    width: 80%;
+
 }
 
 
@@ -413,7 +413,7 @@ footer p {
 
     @media screen and (max-height: 1100px) {
         .rules {
-            height: 50vw;
+            height: 35vw;
         }
         .rules img {
             width: 150px;
