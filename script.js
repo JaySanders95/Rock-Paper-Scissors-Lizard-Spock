@@ -117,7 +117,6 @@ const game = () => {
     if (playerChoice === "rock") {
       if (computerPicks === 'scissors') {
         winner.textContent = "You win";
-        playerScore++;
         scoreboard();
         return;
       } else if (computerPicks === 'lizard') {
@@ -155,7 +154,7 @@ const game = () => {
         lives--;
         scoreboard();
         return;
-      } else if (computerPicks === 'rock') {
+      } else if (computerPicks === 'scissors') {
         winner.textContent = "You lose a life";
         lives--;
         scoreboard();
