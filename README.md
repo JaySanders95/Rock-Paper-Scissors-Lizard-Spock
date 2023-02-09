@@ -10,7 +10,8 @@ The entire game is defined within a single function called 'game'.
 
 
 ## HEADER
-![](assets/images/navbar.)
+![](assets/images/navbar.jpg)
+- The title of the game is displayed at the top of the page next to the two option buttons.
 - The Navigation bar is displayed at the top of the screen, it only gives the player two options as there are only two relevant options for the user to choose, 'rules' and 'game'.
 - Clicking the 'rules' button will hide the current display (if not already on the rules section) and then display the rules, with a smooth transition time to add aesthetic.
 - Clicking the 'game' button will hide the current display (if not already on the game section) and then display the rules, with a smooth transition time to add aesthetic.
@@ -29,13 +30,12 @@ The entire game is defined within a single function called 'game'.
 - This section will be displayed no matter what section the user is currently on (i.e 'rules').
 
 ## RULES
-![](assets/images/Rules.jpg)
+![](assets/images/rules.jpg)
 - The rules section is shown to the player upon first loading the webpage, it displays the name of the game above the rules in a h2 header that is underlined.
 - Under the heading, there is a brief description of the game and then simplified rules on how to play the game. This text is white to match the colour scheme of the website.
 - This text will change size depending on the the viewport in which the page is displayed on.
 - Under the rules there is an image, which will aid the user understand the rules, this image will change size depending on the rendered size of the page.
-- Under the rules, there is a clickable button, which follows the same colour scheme as the other clickable buttons within the game. This button will remove the rules and load the actual game.
-- This button was coded with 2 separate events, both with an event listener and a link. The event listener will listen for a click and then change the opacity/cursor events, similar to the nav bar.
+
 
 
 ## HEADING TEXT
