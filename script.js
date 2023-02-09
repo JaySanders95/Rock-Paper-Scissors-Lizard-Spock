@@ -18,7 +18,7 @@ const game = () => {
     rules.style.pointerEvents = "all";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
-    if (lives === 0) {
+    if (lives === 0 || -1 ) {
       playerScore = 0;
       lives = 5;
     }
@@ -31,7 +31,7 @@ const game = () => {
     match.style.pointerEvents = "all";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
-    if (lives === 0) {
+    if (lives === 0 || -1) {
       playerScore = 0;
       lives = 5;
     }
