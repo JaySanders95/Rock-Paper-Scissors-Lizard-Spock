@@ -18,6 +18,8 @@ const game = () => {
     rules.style.pointerEvents = "all";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
+    rulesNav.style.backgroundColor = "green";
+    gameNav.style.backgroundColor = "red";
     if (lives === 0 || -1 ) {
       playerScore = 0;
       lives = 5;
@@ -31,6 +33,8 @@ const game = () => {
     match.style.pointerEvents = "all";
     gameOver.style.opacity = "0";
     gameOver.pointerEvents = "none";
+    gameNav.style.backgroundColor = "green";
+    rulesNav.style.backgroundColor = "red";
     if (lives === 0 || -1) {
       playerScore = 0;
       lives = 5;

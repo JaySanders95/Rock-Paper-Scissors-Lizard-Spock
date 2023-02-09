@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors, Lizard, Spock
 
 RPSLS is a game of chance, where the user will choose a selection and have a 2/5 chance to win, 2/5 chance to lose and 1/5 chance to tie, all based on random number generated selections from the computer. The user is first given an in-sight on the rules of the game,
-with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the game button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are deplated, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
+with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the game button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are depleted, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
 The entire game is defined within a single function called 'game'.
 ![](am i responsive picture when done)
 
@@ -13,6 +13,7 @@ The entire game is defined within a single function called 'game'.
 ![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/navbar.jpg)
 - The title of the game is displayed at the top of the page next to the two option buttons.
 - The Navigation bar is displayed at the top of the screen, it only gives the player two options as there are only two relevant options for the user to choose, 'rules' and 'game'.
+- The background colour matches that of the footer, with white text to compliment it.
 - Clicking the 'rules' button will hide the current display (if not already on the rules section) and then display the rules, with a smooth transition time to add aesthetic.
 - Clicking the 'game' button will hide the current display (if not already on the game section) and then display the rules, with a smooth transition time to add aesthetic.
 - Once rendered in a different size, the logo and the text will auto shrink in size to fit nicely for the user aesthetic.
@@ -72,14 +73,17 @@ The entire game is defined within a single function called 'game'.
 
 
 ## Footer
-![](assets/images/Footer.jpg)
+![](assets/images/foot.jpg)
 - This section is at the bottom of the page and remains at the bottom of the page when the user is nearer the top, this is so the footer does not cover any other content when viewing the page.
 - the text for copyright and the 'text' colour used on the clickable social media icons, taken from FontAwesome and modified larger. When these links are clicked, they do not navigate the user away from the page, rather it opens a new tab with the _blank attribute.
 -The links are that of my own and will take the user to my Github page/LinkedIn profile.
 
 
 ## Testing
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/iphoneSE.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/iphoneXR.jpg)
 - I tested this page across multiple devices and multiple browsers, The rendering of all elements was satisfactory upon multiple tests.
+- I completed the rendering size for all available options on the developers options and all ran smoothly.
 - I can confirm that the page rendered satisfactory across all devices.
 - I can also confirm that all of the buttons worked across all devices, navigation took the users to the correct place and the game played as intended.
 - I can confirm the game will reset upon being asked to.
@@ -92,11 +96,11 @@ The entire game is defined within a single function called 'game'.
 - The scoreboard would not work correctly, it would add multiple values to the score when only one outcome was selected, this was due to the function assuming the player had selected multiple choices for one click. I fixed this bug by creating an If selection for each and an if else selection for each, rather than just an IF/Else. This would also affect what text was displayed upon selecting and was fixed when the if else was changed.
 - The game would not run entirely, this was fixed because the game() function was not being called.
 - The images would not load correctly when selected, this was because the value attached did not match the selection. i fixed this by adding a decideWinner() function that called two arguments, this.textContent & computerPicks variables.
-- When the User's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
+- When the user's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
 - When rendering view sizes, i encountered bugs where buttons would not 'click' in certain resolutions, for this fix, i had to strip the CSS down and find out what was causing it, when i realised it was based on the values of the CSS itself, i had to delete and re-do the CSS.
 
 ### Some were not fixed, and rather i had a workaround for them:
-- When the user intentionall spams a selection in order to try to break the game, the value can go below 0. As a shortfix, the game will reset on -1. but if it it spammed fast enough it may break the game. i tested this multiple times and found it broke the game around every 1 in 30-40 tries.
+- When the user intentionally spams a selection in order to try to break the game, the value can go below 0. As a shortfix, the game will reset on -1. but if it it spammed fast enough it may break the game. i tested this multiple times and found it broke the game around every 1 in 30-40 tries.
 
 ## Validator testing
 ### HTML
@@ -110,7 +114,6 @@ The entire game is defined within a single function called 'game'.
 ## Accessibility
 - The scores for lighthouse were as follows; they were very good. no major issues that weren't fixed.
 ![](assets/images/Lighthouse2.jpg) 
-
 
 
 
