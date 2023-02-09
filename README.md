@@ -124,9 +124,9 @@ The entire game is defined within a single function called 'game'.
 ## Deployment
 - The site was deployed to Github pages, the steps were as follows;
 - - In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
-- - In the github respository, above the files i clicked the settings icon, within this page there is a link to "pages" and from there i clicked the drop down menu and selected "main". After a refresh of the page, the link was available.
 
-The link for my page is here:
+
+The link for my page is here: https://jaysanders95.github.io/Rock-Paper-Scissors-Lizard-Spock/
 
 ## Credits
 - Re-used code from myself, the project beforehand. This was only basic code such as the FontAwesome script code.
