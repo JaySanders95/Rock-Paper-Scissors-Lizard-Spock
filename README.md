@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors, Lizard, Spock
 
 RPSLS is a game of chance, where the user will choose a selection and have a 2/5 chance to win, 2/5 chance to lose and 1/5 chance to tie, all based on random number generated selections from the computer. The user is first given an in-sight on the rules of the game,
-with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are deplated, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
+with a picture to help understand them. Then they are met with two options, one of which is null as they are already on the rules page and the games page. After clicking the game button they are faced with the game, a simple UI which displays the player choice, computer choice, score, lives remaining, options they can select and the result of the last game. Once all lives are deplated, the user is met with a game over pop up, which will give the option to restart the game. During gameplay the user can see the rules again and switch between the rules and the game.
 The entire game is defined within a single function called 'game'.
 ![](am i responsive picture when done)
 
@@ -10,7 +10,7 @@ The entire game is defined within a single function called 'game'.
 
 
 ## HEADER
-![](assets/images/navbar.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/navbar.jpg)
 - The title of the game is displayed at the top of the page next to the two option buttons.
 - The Navigation bar is displayed at the top of the screen, it only gives the player two options as there are only two relevant options for the user to choose, 'rules' and 'game'.
 - Clicking the 'rules' button will hide the current display (if not already on the rules section) and then display the rules, with a smooth transition time to add aesthetic.
@@ -22,7 +22,7 @@ The entire game is defined within a single function called 'game'.
 - If a player clicks one of these after the game has ended, there is an 'if' loop that will prevent the game from bugging.
 
 ## SCORE SECTION
-![](assets/images/scoreboard.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/scoreboard.jpg)
 - This is displayed at the top of the screen, split evenly across the screen and will render smaller or larger depending on the size of the device it is being displayed on.
 - The 'score' section starts at '0' and every time a player wins the score increases, this is done by using incrementation on the integer(++).
 - The 'lives' section starts at '5'and every time a player loses the lives decrease, this is done by using decrementation on the integer(--).
@@ -30,7 +30,7 @@ The entire game is defined within a single function called 'game'.
 - This section will be displayed no matter what section the user is currently on (i.e 'rules').
 
 ## RULES
-![](assets/images/rules.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/rules.jpg)
 - The rules section is shown to the player upon first loading the webpage, it displays the name of the game above the rules in a h2 header that is underlined.
 - Under the heading, there is a brief description of the game and then simplified rules on how to play the game. This text is white to match the colour scheme of the website.
 - This text will change size depending on the the viewport in which the page is displayed on.
@@ -39,8 +39,8 @@ The entire game is defined within a single function called 'game'.
 
 
 ## HEADING TEXT
-![](assets/images/alternatingTexts.jpg)
-- The heading text is displayed across the screen underneath the score section, this will tell the user if they win or if they lose.
+- You can see this example in the GAMEPLAY section.
+- The heading text is displayed beneath the gameplay, this will tell the user if they win or if they lose.
 - This text will render smaller or bigger depending on the size of the device it is being displayed on.
 - This text is linked to an IF ELSE loop and using .textContent it will either display "Tie!", "You win" or "You lose a life" based on the player selection in relation to the computer selection.
 - This text is white, which will match the rest of the text content.
@@ -48,7 +48,9 @@ The entire game is defined within a single function called 'game'.
 
 
 ## GAMEPLAY
-![](assets/images/mainGame.jpg) 
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/alternatingtext.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/alternatingtext2.jpg)
+![](../Rock-Paper-Scissors-Lizard-Spock/assets/images/alternatingtext3.jpg) 
 - This is where the main game is played, across the centre of the screen where it will display the players current choice in an image and the computers choice in an image.
 - The game is displayed underneath the header and score section and will render differently depending on the resolution size, either in a row or column and will change also change sizes.
 - The images are linked to the clickable buttons and will listen for a click event, when this occurs, it will change according to the text selection that has been made.
@@ -91,10 +93,10 @@ The entire game is defined within a single function called 'game'.
 - The game would not run entirely, this was fixed because the game() function was not being called.
 - The images would not load correctly when selected, this was because the value attached did not match the selection. i fixed this by adding a decideWinner() function that called two arguments, this.textContent & computerPicks variables.
 - When the User's game finishes and they are greeted with the game over screen, by clicking one of the rules or game section would not reset the lives/score and the counter would keep going on both into the minus for lives. This would bypass the resetting of the game, so i added the reset variables to both of these and once either of the two nav options are clicked, they will now reset the game.
+- When rendering view sizes, i encountered bugs where buttons would not 'click' in certain resolutions, for this fix, i had to strip the CSS down and find out what was causing it, when i realised it was based on the values of the CSS itself, i had to delete and re-do the CSS.
 
 ### Some were not fixed, and rather i had a workaround for them:
-- When rendered to different sizes, the page h2 will sometimes bug through the nav bar, i amended the different sizes based on width and height and tried to accomodate all of the sizes with extra padding so it does not do this.
-- When displayed on certain viewport widths, the footer will have a gap, it is hard to determine whether this will truly occur as i have seen on two different devices the viewport for a certain device and both show differently.
+- When the user intentionall spams a selection in order to try to break the game, the value can go below 0. As a shortfix, the game will reset on -1. but if it it spammed fast enough it may break the game. i tested this multiple times and found it broke the game around every 1 in 30-40 tries.
 
 ## Validator testing
 ### HTML

@@ -65,6 +65,7 @@ the computer and the user, the 5 option buttons and the text */
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
+    padding-top: 80px;
 }
 
 #game div p {
@@ -111,13 +112,8 @@ moves and the button for starting the game. */
 
 /* This part specifically contains the main game part */
 .match {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-
-    opacity: 0;
+text-align: center;
+opacity: 0;
 }
 
 h2.win {
@@ -238,7 +234,7 @@ footer {
     justify-content: space-between;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -50px;
 }
 
 footer i {
@@ -413,6 +409,13 @@ footer p {
         }
         .rules img {
             width: 150px;
+        }
+
+        header {
+            height:40px;
+        }
+        div.selection {
+            height: 172px;
         }
     }
 }
