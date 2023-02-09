@@ -14,6 +14,8 @@ body {
 /* Navigation bar for the user to switch between the rules and the game */
 #header {
     height: 100px;
+    position:static;
+    overflow: hidden;
 }
 
 .rulesNav {
@@ -36,13 +38,15 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: static;
+    overflow: hidden;
 }
 
 #score-section nav>button {
     background-color: rgb(255, 0, 0);
     border: 2px black solid;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     cursor: pointer;
     width: 115px;
     height: 60px;
@@ -83,10 +87,10 @@ moves and the button for starting the game. */
     flex-direction: column;
     height: 44rem;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 100%;
+    width: 40%;
     padding-bottom: 70px;
 }
 
@@ -265,11 +269,11 @@ footer p {
 
     @media screen and (max-width: 700px) {
         #score-section nav {
-            font-size: 22px;
+            font-size: 16px;
         }
 
         #score-section nav>button {
-            font-size: 22px;
+            font-size: 18px;
             height: 40px;
         }
 
