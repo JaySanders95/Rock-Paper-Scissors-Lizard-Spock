@@ -413,10 +413,15 @@ footer p {
 
         .rules img {
             width: 120px;
+            padding-bottom: 20px;
         }
 
         .rules {
             height: 40vw;
+        }
+        
+        #header {
+            height: 80px;
         }
 
     }
