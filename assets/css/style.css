@@ -92,11 +92,11 @@ moves and the button for starting the game. */
 .rules h2 {
     text-decoration: underline;
     padding: 15px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .rules p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .rules img {
@@ -338,14 +338,18 @@ footer p {
             font-size: 19px;
         }
 
+        .rules {
+            height: 50vw;
+        }
+
     }
     @media screen and (max-width: 400px) {
         #score-section nav {
-            font-size: 16px;
+            font-size: 12px;
         }
 
         #score-section nav>button {
-            font-size: 17px;
+            font-size: 14px;
         }
 
         #game {
@@ -377,5 +381,38 @@ footer p {
             font-size: 14px;
         }
 
+        img.computers-selection {
+            width: 100px;
+            height: 100px;
+        }
+
+        img.players-selection {
+            width: 100px;
+            height: 100px;
+        }
+
+        .options button {
+            width: 70px;
+            height: 20px;
+            font-size: 12px;
+        }
+
+        .rules img {
+            width: 120px;
+        }
+
+        .rules {
+            height: 40vw;
+        }
+
+    }
+
+    @media screen and (max-height: 1100px) {
+        .rules {
+            height: 50vw;
+        }
+        .rules img {
+            width: 150px;
+        }
     }
 }
