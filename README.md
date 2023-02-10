@@ -115,7 +115,7 @@ The entire game is defined within a single function called 'game'.
 
 ## Accessibility
 - The scores for lighthouse were as follows; they were very good. no major issues that weren't fixed.
-![](assets/images/Lighthouse2.jpg) 
+![](assets/images/lighthouse.jpg) 
 
 
 
