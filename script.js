@@ -9,10 +9,14 @@ const game = () => {
   const match = document.querySelector('.match');
   const gameOver = document.querySelector('.gameOver');
   const winner = document.querySelector('.win');
+  const selection = document.querySelector('.selection');
+  const optionContainer = document.querySelector('.options');
 
   rulesNav.addEventListener('click', () => {
-    match.style.opacity = "0";
+    selection.style.display = "none";
+    match.style.display = "none";
     match.style.pointerEvents = "none";
+    optionContainer.style.display = "none";
     rules.style.opacity = "1";
     rules.style.transition = "all 1.5s";
     rules.style.pointerEvents = "all";
@@ -21,16 +25,17 @@ const game = () => {
     gameOver.pointerEvents = "none";
     rulesNav.style.backgroundColor = "green";
     gameNav.style.backgroundColor = "red";
-    if (lives === 0 || -1 ) {
+    if (lives === 0 || -1) {
       playerScore = 0;
       lives = 5;
     }
   });
   gameNav.addEventListener('click', () => {
+    selection.style.display = "flex";
+    optionContainer.style.display = "flex";
     rules.style.opacity = "0";
     rules.style.pointerEvents = "none";
-    match.style.opacity = "1";
-    match.style.transition = "all 1.5s";
+    match.style.display = "block";
     match.style.pointerEvents = "all";
     winner.style.opacity = "1";
     gameOver.style.opacity = "0";
@@ -44,7 +49,7 @@ const game = () => {
 
   });
 
- // function for the actual gameplay
+  // function for the actual gameplay
   const playMatch = () => {
     const options = document.querySelectorAll('.options button');
     const playerChoice = document.querySelector('.players-selection');
@@ -73,22 +78,26 @@ const game = () => {
   const reset = () => {
     const match = document.querySelector('.match');
     const gameOver = document.querySelector('.gameOver');
+    const selections = document.querySelectorAll('.rock.paper.scissors.lizard.spock')
     // removes match from screen and replaces with game over screen.
-    match.style.opacity = "0";
-    match.style.pointerEvents = "none";
+    match.style.display = "none";
+    match.style.pointerevents = "none";
+    selections.pointerEvents = "none";
     gameOver.style.opacity = "1";
     gameOver.style.pointerEvents = "all";
     gameOver.style.transition = "all 1.5s";
     //Removes game over screen and starts game again, resetting the players score and the lives.
     const resetButton = document.querySelector('.resetGame');
     resetButton.addEventListener('click', () => {
-      match.style.opacity = "1";
+      match.style.display = "block";
       match.style.pointerEvents = "all";
       gameOver.style.opacity = "0";
       gameOver.style.pointerEvents = "none";
       lives = 5;
       playerScore = 0;
     });
+
+
   };
 
 

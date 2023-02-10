@@ -14,7 +14,7 @@ body {
 /* Navigation bar for the user to switch between the rules and the game */
 #header {
     height: 100px;
-    position:static;
+    position: static;
     overflow: hidden;
 }
 
@@ -118,8 +118,8 @@ moves and the button for starting the game. */
 
 /* This part specifically contains the main game part */
 .match {
-text-align: center;
-opacity: 0;
+    text-align: center;
+    display: none;
 }
 
 h2.win {
@@ -127,7 +127,7 @@ h2.win {
     font-size: 40px;
     width: 30%;
     margin: 0 auto;
-    opacity: 0;
+    display: none;
 }
 
 
@@ -138,6 +138,7 @@ div.selection {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    display: none;
 }
 
 #playergroup {
@@ -172,9 +173,10 @@ img.players-selection {
 
 
 div.options {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     padding-top: 50px;
+
 }
 
 .options button {
@@ -187,7 +189,7 @@ div.options {
     border-radius: 5%;
     font-weight: 600;
     font-size: 30px;
-    pointer-events: all;
+
 }
 
 /* The players selection and the computers selection */
@@ -269,7 +271,7 @@ footer p {
 @supports (display: flex) {
 
     @media screen and (max-width: 300px) {
-        .rules{
+        .rules {
             width: 102px;
             padding-bottom: 100px;
         }
@@ -357,6 +359,7 @@ footer p {
         }
 
     }
+
     @media screen and (max-width: 400px) {
         #score-section nav {
             font-size: 12px;
@@ -378,10 +381,11 @@ footer p {
             font-size: 12px;
 
         }
+
         .rules {
             position: absolute;
             top: 23rem;
-            
+
         }
 
         .rules p {
@@ -433,7 +437,7 @@ footer p {
         .rules {
             height: 40vw;
         }
-        
+
         #header {
             height: 80px;
         }
@@ -444,15 +448,14 @@ footer p {
         .rules {
             height: 50vw;
         }
+
         .rules img {
             width: 150px;
         }
 
         header {
-            height:40px;
+            height: 40px;
         }
-        div.selection {
-            height: 172px;
-        }
+
     }
 }
