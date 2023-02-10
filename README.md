@@ -103,8 +103,6 @@ The entire game is defined within a single function called 'game'.
 - When deployed, the buttons would only be clickable halfway up them, because a height wasnt defined. to fix this, i defined a height for the different viewports.
 - Scrollbar does not load in until a couple of seconds or when the play game function is clicked. This was not fixed.
 
-### Some were not fixed, and rather i had a workaround for them:
-- When the user intentionally spams a selection in order to try to break the game, the value can go below 0. As a shortfix, the game will reset on -1. but if it it spammed fast enough it may break the game. i tested this multiple times and found it broke the game around every 1 in 30-40 tries.
 
 ## Validator testing
 ### HTML
